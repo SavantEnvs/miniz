@@ -1,0 +1,8 @@
+project: savantenvs/miniz
+target: checksum_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/checksum_fuzzer
+    libfuzzer: true
+    timeout: 5

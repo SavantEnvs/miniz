@@ -1,0 +1,10 @@
+project: savantenvs/miniz
+target: zip_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zip_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/zip_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/tests/zip.dict
+    timeout: 5
